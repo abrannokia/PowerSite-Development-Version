@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7e1ed49c-b9d6-4507-afbf-b7fa6f953aa4}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>manage.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{5F0BE9CA-D677-4A4D-8806-6076C0FAAD37};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Django launcher</LaunchProvider>
+    <InterpreterId>Global|PythonCore|3.7</InterpreterId>
+    <WebBrowserUrl>http://localhost</WebBrowserUrl>
+    <DjangoSettingsModule>mysite.settings</DjangoSettingsModule>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Calculations.py" />
+    <Compile Include="main\admin.py" />
+    <Compile Include="main\apps.py" />
+    <Compile Include="main\migrations\__init__.py" />
+    <Compile Include="main\models.py" />
+    <Compile Include="main\tests.py" />
+    <Compile Include="main\views.py" />
+    <Compile Include="main\__init__.py" />
+    <Compile Include="manage.py" />
+    <Compile Include="myMsgApp\admin.py" />
+    <Compile Include="myMsgApp\apps.py" />
+    <Compile Include="myMsgApp\forms.py" />
+    <Compile Include="myMsgApp\migrations\0001_initial.py" />
+    <Compile Include="myMsgApp\migrations\__init__.py" />
+    <Compile Include="myMsgApp\models.py" />
+    <Compile Include="myMsgApp\templates\myMsgApp\Calculations.py" />
+    <Compile Include="myMsgApp\tests.py" />
+    <Compile Include="myMsgApp\views.py" />
+    <Compile Include="myMsgApp\__init__.py" />
+    <Compile Include="mysite\core\apps.py" />
+    <Compile Include="mysite\core\forms.py" />
+    <Compile Include="mysite\core\migrations\0001_initial.py" />
+    <Compile Include="mysite\core\migrations\0002_profile_email_confirmed.py" />
+    <Compile Include="mysite\core\migrations\__init__.py" />
+    <Compile Include="mysite\core\models.py" />
+    <Compile Include="mysite\core\tests.py" />
+    <Compile Include="mysite\core\tokens.py" />
+    <Compile Include="mysite\core\views.py" />
+    <Compile Include="mysite\core\__init__.py" />
+    <Compile Include="mysite\settings.py" />
+    <Compile Include="mysite\urls.py" />
+    <Compile Include="mysite\wsgi.py" />
+    <Compile Include="mysite\__init__.py" />
+    <Compile Include="SQLtoCSV.py" />
+    <Compile Include="TableCreators.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="myMsgApp\images\logo\energy.png" />
+    <Content Include="myMsgApp\static\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="myMsgApp\static\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="myMsgApp\static\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="myMsgApp\static\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="myMsgApp\static\bootstrap\css\bootstrap.css" />
+    <Content Include="myMsgApp\static\bootstrap\css\bootstrap.min.css" />
+    <Content Include="myMsgApp\static\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="myMsgApp\static\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="myMsgApp\static\bootstrap\js\bootstrap.js" />
+    <Content Include="myMsgApp\static\bootstrap\js\bootstrap.min.js" />
+    <Content Include="myMsgApp\static\js\example-table.js" />
+    <Content Include="myMsgApp\static\js\jquery-3.1.1.min.js" />
+    <Content Include="myMsgApp\static\js\jquery-3.3.1.js" />
+    <Content Include="myMsgApp\static\js\rango-jquery.js" />
+    <Content Include="myMsgApp\static\MyMsgApp\FlipBox.css" />
+    <Content Include="myMsgApp\static\MyMsgApp\Images\background.jpg" />
+    <Content Include="myMsgApp\static\MyMsgApp\Images\energy.png" />
+    <Content Include="myMsgApp\static\MyMsgApp\jquery-3.1.1.min.js" />
+    <Content Include="myMsgApp\static\MyMsgApp\jquery-3.3.1.js" />
+    <Content Include="myMsgApp\static\MyMsgApp\newspaper.css" />
+    <Content Include="myMsgApp\static\MyMsgApp\newspapermain.css" />
+    <Content Include="myMsgApp\static\MyMsgApp\styles.css" />
+    <Content Include="myMsgApp\templates\myMsgApp\capacitynorms.html" />
+    <Content Include="myMsgApp\templates\myMsgApp\capacitytaskstable.html" />
+    <Content Include="myMsgApp\templates\myMsgApp\codeofconduct.html" />
+    <Content Include="myMsgApp\templates\myMsgApp\competencetracker.html" />
+    <Content Include="myMsgApp\templates\myMsgApp\developmentpage.html" />
+    <Content Include="myMsgApp\templates\myMsgApp\example-table.js" />
+    <Content Include="myMsgApp\templates\myMsgApp\favicon.jpg" />
+    <Content Include="myMsgApp\templates\myMsgApp\FTEReportingTable.html" />
+    <Content Include="myMsgApp\templates\myMsgApp\home.html" />
+    <Content Include="myMsgApp\templates\myMsgApp\mainhome.html" />
+    <Content Include="myMsgApp\templates\myMsgApp\mycatprocedures.html" />
+    <Content Include="myMsgApp\templates\myMsgApp\navbar.html" />
+    <Content Include="myMsgApp\templates\myMsgApp\output.html" />
+    <Content Include="myMsgApp\templates\myMsgApp\pandas_bootstrap_table.js" />
+    <Content Include="myMsgApp\templates\myMsgApp\reportedhours.html" />
+    <Content Include="myMsgApp\templates\myMsgApp\reportedhourstable.html" />
+    <Content Include="myMsgApp\templates\myMsgApp\resoucecalculationFTE.html" />
+    <Content Include="myMsgApp\templates\myMsgApp\resoucecalculationsubproject.html" />
+    <Content Include="myMsgApp\templates\myMsgApp\resoucecalculationTASK.html" />
+    <Content Include="myMsgApp\templates\myMsgApp\resourcecalculation.html" />
+    <Content Include="myMsgApp\templates\myMsgApp\test.html" />
+    <Content Include="myMsgApp\templates\myMsgApp\test2.html" />
+    <Content Include="myMsgApp\templates\myMsgApp\testpage.html" />
+    <Content Include="myMsgApp\templates\myMsgApp\weeklyutilisation.html" />
+    <Content Include="static\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="static\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="static\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="static\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="static\bootstrap\css\bootstrap.css" />
+    <Content Include="static\bootstrap\css\bootstrap.min.css" />
+    <Content Include="static\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="static\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="static\bootstrap\js\bootstrap.js" />
+    <Content Include="static\bootstrap\js\bootstrap.min.js" />
+    <Content Include="static\login\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="static\login\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="static\login\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="static\login\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="static\login\bootstrap\css\bootstrap.css" />
+    <Content Include="static\login\bootstrap\css\bootstrap.min.css" />
+    <Content Include="static\login\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="static\login\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="static\login\bootstrap\js\bootstrap.js" />
+    <Content Include="static\login\bootstrap\js\bootstrap.min.js" />
+    <Content Include="templates\account_activation_email.html" />
+    <Content Include="templates\account_activation_invalid.html" />
+    <Content Include="templates\account_activation_sent.html" />
+    <Content Include="templates\home.html" />
+    <Content Include="templates\registration\login.html" />
+    <Content Include="templates\registration\main.html" />
+    <Content Include="templates\registration\signup.html" />
+    <Content Include="templates\signup.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="main" />
+    <Folder Include="main\migrations" />
+    <Folder Include="myMsgApp" />
+    <Folder Include="myMsgApp\images\" />
+    <Folder Include="myMsgApp\images\logo" />
+    <Folder Include="myMsgApp\migrations" />
+    <Folder Include="myMsgApp\static\" />
+    <Folder Include="myMsgApp\static\bootstrap\" />
+    <Folder Include="myMsgApp\static\bootstrap\css" />
+    <Folder Include="myMsgApp\static\bootstrap\js" />
+    <Folder Include="myMsgApp\static\js" />
+    <Folder Include="myMsgApp\static\MyMsgApp" />
+    <Folder Include="myMsgApp\static\MyMsgApp\Images" />
+    <Folder Include="myMsgApp\templates\" />
+    <Folder Include="myMsgApp\templates\myMsgApp" />
+    <Folder Include="mysite" />
+    <Folder Include="mysite\core" />
+    <Folder Include="mysite\core\migrations" />
+    <Folder Include="static\" />
+    <Folder Include="static\bootstrap\" />
+    <Folder Include="static\bootstrap\css" />
+    <Folder Include="static\bootstrap\js" />
+    <Folder Include="static\login\" />
+    <Folder Include="static\login\bootstrap\" />
+    <Folder Include="static\login\bootstrap\css" />
+    <Folder Include="static\login\bootstrap\js" />
+    <Folder Include="templates" />
+    <Folder Include="templates\registration" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|PythonCore|3.7" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <AutoAssignPort>True</AutoAssignPort>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,58 @@
+{% load staticfiles%}
+<link rel="stylesheet" type="text/css" href="{% static 'MyMsgApp/styles.css' %}" />﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=“UTF-8“>
+    <meta http-equiv=“X-UA =Compatible“ content=“IE =edge, chrome=1“>
+    <title>PowerWebSite LOGIN</title>
+    <meta name=“description“ content="">
+    <meta name=“viewport“ content=“width =device-width“>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+</head>
+<body>
+    <link rel="stylesheet" type="text/css" href="{% static 'MyMsgApp/newspapermain.css' %}" />
+    <div class="head">
+        <div class="subhead" style="margin-top: 80px">
+            <p><h1><font color="#404040"> {{ h1Text }} </p></font></h1>
+            {{ pText }}
+
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="collumns">
+            <div class="collumn">
+                <div class=“container“>
+                    <div class=“jumbotron“>
+                        <p></p>
+                        <p><font color="#404040"> {{ messageText }} </p></font>
+                        <button type=“button“ class=“btn btn-primary“ onclick="location.href='{% url 'mymsgsite_login' %}'">LOGIN</button>
+                        <p></p>
+                    </div>
+                </div>
+                </div>  
+                <div class="collumn">
+                    <div class=“container“>
+                        <div class=“jumbotron“>
+
+                        </div>
+                    </div>
+                    </div>
+                    <div class="collumn">
+                        <div class=“container“>
+                            <div class=“jumbotron“>
+                                <div class="head"><span class="headline hl5">About</span><p><span class="headline hl2">More details about this webpage</span></p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+                <script src="{{STATIC_URL}}js/jquery-1.2.6.min.js"></script>
+                <script type="text/javascript" src="{{STATIC_URL}}js/bootstrap.min.js"></script>
+
+
+</body>
+</html>

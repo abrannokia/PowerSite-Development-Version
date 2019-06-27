@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+{% load staticfiles%}
+<html>
+<meta charset=“UTF-8“>
+<meta http-equiv=“X-UA =Compatible“ content=“IE =edge, chrome=1“>
+<title>PowerWebSite HOME PAGE</title>
+<link rel="SHORTCUT ICON" href="favicon.jpg" type="image/x-icon" />
+<link rel="ICON" href="favicon.jpg" type="image/ico" />
+<meta name=“description“ content="">
+<meta name=“viewport“ content=“width =device-width“>
+
+<link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.js' %}">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+ {% include 'myMsgApp\navbar.html' %}
+
+<div class="jumbotron text-center" style="margin-top:50px">
+    <h1>Traitment OAL</h1>
+    <p><i>Last reviewed on the <font color="#FE9A2E">28th of May 2019</font></i></p>
+</div>
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>
+        {{ message }}</li>
+        {% endfor %}
+</ul>
+{% endif %}
+<script>
+    alert('{{ '"Please acces another page on this website by right click and open in new tab method - JAVASCRIPT issue to be fixed :|"' }}');
+</script>
+<div>
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+    <p style="margin-left: 50px">
+        <caption>Step 1: Download data files from customer software and virtual machine to local machine</caption>
+        </p>
+    <p style="margin-left: 50px">
+        <caption>Step 2: Select the location of the downloaded files by selecting the BDR 2g.csv file. This will also determine the folder where operations will be performed.</caption>
+            </p>
+        <p id="demo"></p>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function(){
+
+            $('input[type="file"]').change(function (e) {
+
+                var fileName = e.target.files[0].name
+
+                var filepath = prompt("Please enter your name", fileName);
+
+                var shell = WScript.CreateObject("WScript.Shell");
+
+                shell.Run("command here");
+
+                alert('The root' + filepath + ' has been selected.');
+
+
+      if (filepath != null) {
+        document.getElementById("demo").innerHTML =
+        "Selected filepath: " + filepath;
+      }
+
+            });
+
+        });
+    </script>
+        <form p style="margin-left: 50px">
+            <input type="file">
+        </form>
+        <p style="margin-left: 50px">
+        <caption>Step 3: Update downloaded files to SQL Server</caption>s
+            </p>
+            <p style="margin-left: 50px">
+        <caption>Step 4: Perform SQL Server queries</caption>
+            </p>
+            <p style="margin-left: 50px">
+        <caption>Step 5: Show results</caption>
+            </p>
+    <p style="margin-left: 50px">
+        <caption>Step 6: Develop reporting files</caption>
+            </p>
+    <p style="margin-left: 50px">
+        <caption>Step 6: Develop report</caption>
+            </p>    
+        
+</body>
+</html>
+
+<footer>
+    <p style="margin-left: 40px">By: <a href="mailto:alexandru.bran@nokia.com">Alex@Nokia</a></p>
+
+</footer> 

@@ -1,0 +1,48 @@
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'MyMsgApp/styles.css' %}" />﻿
+<link rel="stylesheet" type="text/css" href="{% static 'MyMsgApp/newspaper.css' %}" />
+{% load crispy_forms_tags %}
+
+<html>
+    <head>
+        <div class="head">
+            <div class="subhead" style="margin-top: 80px">
+                <h1><b>Please login in order to proceed</b></h1>
+            </div>
+        </div>
+
+    </head>
+    <body>
+          <div class="content">
+            <div class="collumns">
+                <div class="collumn">
+                    <div class="head">
+                        <span class="headline hl3">Enter your NSI and password:</span><p>
+                            <form method="POST">
+                                {% csrf_token %}
+                        <p>
+                            <label>NOKIA ID:</label>
+                            <input type="text" name="username">
+                        </p>
+                        <p>
+                            <label>PASSWORD:</label>
+                            <input type="password" name="password">
+                        </p>
+                        <p class="text-warning"> Note: both fields may be case sensitive! </p>
+                        <button type="submit">Login</button>
+                        </form>
+                            <div class="container">
+                                <div class="jumbotron" ›
+                                     {% if form.errors %}
+                                <p class="text-warning"> Username and/or password incorrect. Please try again.</p>
+                                {% endif %}
+                                <p></p>
+                                <button onclick="window.location.href = '/signup'">New user? Free sign up here!</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </body>
+</html>

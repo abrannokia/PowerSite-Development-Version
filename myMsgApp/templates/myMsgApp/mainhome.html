@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% load staticfiles%}
+
+<html>
+
+
+{% block head-javascript %}
+<link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.js' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'MyMsgApp/styles.css' %}" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+{% endblock %}
+
+
+     {% include 'myMsgApp\navbar.html' %}
+
+<body>
+    <link rel="stylesheet" type="text/css" href="{% static 'MyMsgApp/newspaper.css' %}" />
+    <div class="head">
+        <div class="subhead" style="margin-top: 80px">
+            <h1><b>My first bootstrap page is under creation</b></h1>
+            <p><i>Only the sections colored in <font color="#3cb371">green</font> are available...</i></p>
+            <p>Feel free to leave any suggestions to <a href="mailto:alexandru.bran@nokia.com">Alex@Nokia</a></p>
+        </div>
+    </div>
+
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>
+            {{ message }}</li>
+            {% endfor %}
+    </ul>
+    {% endif %}
+
+    <iframe style="display: block; margin: auto;" width="560" height="450" src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0" frameborder="0" allowfullscreen></iframe>
+
+</body>
+</html>
+
+    <footer>
+        <p style="margin-left: 40px">By: <a href="mailto:alexandru.bran@nokia.com">Alex@Nokia</a></p>
+
+    </footer>

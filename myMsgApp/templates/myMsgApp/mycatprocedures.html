@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+{% load staticfiles%}
+<html>
+<meta charset=“UTF-8“>
+<meta http-equiv=“X-UA =Compatible“ content=“IE =edge, chrome=1“>
+<title>PowerWebSite HOME PAGE</title>
+<link rel="SHORTCUT ICON" href="favicon.jpg" type="image/x-icon" />
+<link rel="ICON" href="favicon.jpg" type="image/ico" />
+<meta name=“description“ content="">
+<meta name=“viewport“ content=“width =device-width“>
+
+<link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.js' %}">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+ {% include 'myMsgApp\navbar.html' %}
+
+<div class="jumbotron text-center" style="margin-top:50px">
+    <h1>Guidlines on how to use My CAT</h1>
+    <p><i>Last reviewed on the <font color="#FE9A2E">08th of February 2019</font></i></p>
+</div>
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>
+        {{ message }}</li>
+        {% endfor %}
+</ul>
+{% endif %}
+<script>
+    alert('{{ '"Please acces another page on this website by right click and open in new tab method - JAVASCRIPT issue to be fixed :|"' }}');
+</script>
+<div>
+    <h1><p style="margin-left: 40px">Below table describes the type of entries existing in My CAT application, their description, when to use them and their constraints:   </p></h1>
+
+    <style>
+        th {
+            text-align: center;
+        }
+
+        th {
+            padding: 10px;
+        }
+
+        td {
+            padding: 5px;
+            text-align: center;
+            td: hover
+
+        {
+            background-color: #f5f5f5;
+        }
+
+        }
+
+        div {
+            word-wrap: break-word;
+        }
+    </style>
+    <table cellpadding="30" border="1" , style="margin-left: 40px">
+        <tr>
+        <thead bgcolor="#33ACFF">
+        <th align="center" title="This column contains the name of the entry">Name</th>
+        <th align="center" title="This column contains the category of the entry">Category</th>
+        <th align="center" title="This column contains the entity who will approve the entry (e.g. TPM -> Line Manager)">Approval Entity / Order</th>
+        <th align="center" title="This column contains the entries specific color">Color</th>
+        <th align="center" title="To be available on future versions">Icon</th>
+        <th align="center" title="Need of replacament">Replacement</th>
+        <th align="center" title="This column describes when to use each entry type">When to use it?</th>
+        <th align="center" title="What are the dependencies / limitations of each entry?">Constraints</th>
+        <th align="center" title="Comments">Comments</th>
+        </thead>
+        </tr>
+        <tr align="center">
+            <td>Vacation</td>
+            <td>Absence/Leave</td>
+            <td>TPM - LM</td>
+            <td bgcolor="#FF0000"></td>
+            <td> - </td>
+            <td>Yes</td>
+            <td> When submiting a vacation request </td>
+            <td> - </td>
+            <td> Nokia Employees have to use ADP as well </td>
+        </tr>
+        </tr>
+        <tr align="center">
+            <td>Day Off (Recovery)</td>
+            <td>Absence/Leave</td>
+            <td>TPM - LM</td>
+            <td bgcolor="#FF0000"></td>
+            <td> - </td>
+            <td>Yes</td>
+            <td> Recovering a working day performed in weekend / on a day off (e.g. Sunday, 24th of January)</td>
+            <td> - </td>
+            <td> Nokia Employees have to use ADP as well </td>
+        </tr>
+        </tr>
+        <tr align="center">
+            <td>8th March</td>
+            <td>Absence/Leave</td>
+            <td> - </td>
+            <td bgcolor="#FF0000"></td>
+            <td> - </td>
+            <td>Yes</td>
+            <td> Day off based on "CCM" </td>
+            <td> - </td>
+            <td> Nokia Employees have to use ADP as well </td>
+        </tr>
+        </tr>
+        <tr align="center">
+            <td>Medical Leave</td>
+            <td>Absence/Leave</td>
+            <td> - </td>
+            <td bgcolor="#FF0000"></td>
+            <td> - </td>
+            <td>Yes</td>
+            <td> - </td>
+            <td> - </td>
+            <td> Nokia Employees have to use ADP as well </td>
+        </tr>
+        </tr>
+        <tr align="center">
+            <td>On Call</td>
+            <td>Daily Schedule</td>
+            <td> - </td>
+            <td bgcolor="#FF0000"> </td>
+            <td> - </td>
+            <td>No</td>
+            <td> On call daily schedule </td>
+            <td> - </td>
+            <td> - </td>
+        </tr>
+        <tr align="center">
+            <td>Hotline</td>
+            <td>Daily Schedule</td>
+            <td> - </td>
+            <td bgcolor="#FF0000"></td>
+            <td> - </td>
+            <td>No</td>
+            <td> Hotline daily schedule </td>
+            <td> - </td>
+            <td> - </td>
+        </tr>
+        <tr align="center">
+            <td>Day Off (due tue work)</td>
+            <td>Daily Schedule</td>
+            <td> - </td>
+            <td bgcolor="#FF0000"></td>
+            <td> - </td>
+            <td>No</td>
+            <td> Day off, if you performed the necessary number of hours in the other days of the week (e.g. on "Coupure" schedule) </td>
+            <td> - </td>
+            <td> - </td>
+        </tr>
+        <tr align="center">
+            <td>Special Events</td>
+            <td>Absence/Leave</td>
+            <td>TPM - LM</td>
+            <td bgcolor="#FF0000"></td>
+            <td> - </td>
+            <td>Yes</td>
+            <td> e.g. Getting married & other free days based on "CCM" </td>
+            <td> - </td>
+            <td> - </td>
+        </tr>
+        <tr align="center">
+            <td>Forecast EH</td>
+            <td>WorkingTime</td>
+            <td> - </td>
+            <td bgcolor="#FF0000"></td>
+            <td> - </td>
+            <td>-</td>
+            <td> Daily hours assumed to be performed in the future period - used when requested by management, for time sheet creation </td>
+            <td> - </td>
+            <td> Only fro Deltatel emoloyees. Nokia Employees please use ADP </td>
+        </tr>
+        <tr align="center">
+            <td>Forecast NH</td>
+            <td>WorkingTime</td>
+            <td> - </td>
+            <td bgcolor="#FF0000"></td>
+            <td>-</td>
+            <td>-</td>
+            <td> Night hours assumed to be performed in the future period - used when requested by management, for time sheet creation </td>
+            <td> - </td>
+            <td>Only fro Deltatel emoloyees. Nokia Employees please use ADP</td>
+        </tr>
+        <tr align="center">
+            <td>Morning Tasks</td>
+            <td>Daily Schedule</td>
+            <td>-</td>
+            <td bgcolor="#FF0000"></td>
+            <td> - </td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr align="center">
+            <td>Night Tasks</td>
+            <td>Daily Schedule</td>
+            <td>-</td>
+            <td bgcolor="#FF0000"></td>
+            <td> - </td>
+            <td>-</td>
+            <td> When working on night shift </td>
+            <td> - </td>
+            <td>-</td>
+        </tr>
+        <tr align="center">
+            <td>Training</td>
+            <td>Daily Schedule</td>
+            <td>-</td>
+            <td bgcolor="#FF0000"></td>
+            <td> - </td>
+            <td>Yes</td>
+            <td> When participating at training sessions </td>
+            <td> - </td>
+            <td>-</td>
+        </tr>
+        <tr align="center">
+            <td>Blood donation</td>
+            <td>Absence/Leave</td>
+            <td>TPM - LM</td>
+            <td bgcolor="#FF0000"></td>
+            <td> - </td>
+            <td>Yes</td>
+            <td> Day off after blood donation participation </td>
+            <td> - </td>
+            <td> Nokia Employees have to use ADP as well </td>
+        </tr>
+        <tr align="center">
+            <td>Business Trip</td>
+            <td>Daily Schedule</td>
+            <td> - </td>
+            <td bgcolor="#FF0000"></td>
+            <td> - </td>
+            <td>Yes</td>
+            <td>-</td>
+            <td> - </td>
+            <td>-</td>
+        </tr>
+        <tr align="center">
+            <td>Working on day off</td>
+            <td>Daily Schedule</td>
+            <td> LM </td>
+            <td bgcolor="#FF0000"></td>
+            <td> - </td>
+            <td>-</td>
+            <td>-</td>
+            <td>Must add recovery day off as well</td>
+            <td>-</td>
+        </tr>
+    </table>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+</body>
+</html>
+
+<footer>
+    <p style="margin-left: 40px">By: <a href="mailto:alexandru.bran@nokia.com">Alex@Nokia</a></p>
+
+</footer> 

@@ -1,0 +1,223 @@
+﻿<!DOCTYPE html>
+{% load staticfiles%}
+
+<html>
+<meta charset=â€śUTF-8â€ś>
+<meta http-equiv=â€śX-UA =Compatibleâ€ś content=â€śIE =edge, chrome=1â€ś>
+<title>NI GSD Code of Conduct</title>
+<link rel="SHORTCUT ICON" href="favicon.jpg" type="image/x-icon" />
+<link rel="ICON" href="favicon.jpg" type="image/ico" />
+<meta name=â€śdescriptionâ€ś content="">
+<meta name=â€śviewportâ€ś content=â€świdth =device-widthâ€ś>
+
+<link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.js' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'MyMsgApp/styles.css' %}" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<div>
+    {% include 'myMsgApp\navbar.html' %}
+</div>
+</body>
+</html>
+
+<body>
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>
+            {{ message }}</li>
+            {% endfor %}
+    </ul>
+    {% endif %}
+    <script>
+        alert('{{ '"Please acces any other page on this website by right click and open in new tab method - JAVASCRIPT issue to be fixed :|"' }}');
+    </script>
+ 
+    <head>
+        <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900,400italic,700italic,900italic|Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+        <!--<link rel="stylesheet" href="styles/newspaper.css">-->
+        <link rel="stylesheet" type="text/css" href="{% static 'MyMsgApp/newspaper.css' %}" />
+        <title>Newspaper Style Design Experiment</title>
+        <meta name="viewport" content="width=device-width">
+        
+    </head>
+<body>
+    <body>
+        <div class="head">
+            <div class="subhead" style="margin-top: 80px">Respect.Professionalism.Satisfaction
+                <p><b>Manual of ethics and conduct</b></p></div>
+        </div>
+        <div class="content">
+            <div class="collumns">
+                <div class="collumn">
+                    <div class="head"><span class="headline hl3">Introduction</span><p><span class="headline hl6">Why would we need a manual of ethics and code of condcut?</span></p></div>
+                    <p>To be added</p>
+                    <figure class="figure">
+                        <img class="media" src="https://www.womenonbusiness.com/wp-content/uploads/2017/08/workplace-ethics.png" alt="">
+                        <figcaption class="figcaption">"This time, let go your conscious self and act on instinct."</figcaption>
+                    </figure>
+                </div>
+                <div class="collumn">
+                    <div class="head"><span class="headline hl1">Authors</span><p><span class="headline hl6">Who has banged their heads together to create this?</span></p></div>
+                    <p>Alexandru Bran - Data Scientist</p>
+                    <p>Remus Petre - Line Manager NI GSD</p>
+                </div>
+                <div class="collumn">
+                    <div class="head"><span class="headline hl1">Objectives and non-objectives</span><p><span class="headline hl6">What would it's puprpose be?</span></p></div>
+                    To be added</p>
+                    <figure class="figure">
+                        <img class="media" src="https://thumbs.dreamstime.com/z/crazy-office-life-business-people-group-modern-having-fun-72775374.jpg" alt="">
+                        <figcaption class="figcaption">Hermine hoping for courage.</figcaption>
+                    </figure>
+                    <p>To be added.</p>
+
+                </div>
+                <div class="collumn">
+                    <div class="head"><span class="headline hl5">Scope</span><p><span class="headline hl2">How is this manual to be applied.</span></p></div>
+                    To be added.</p>
+
+                    <p>To be added.</p>
+                    <p>To be added.</p>
+                </div>
+                <div class="collumn"><div class="head"><span class="headline hl3">Applicability </span><p><span class="headline hl4">Whom needs to take into consideration all these?</span></p></div>
+                <figure class="figure">
+                    <img class="media" src="data:image/jpeg;base64,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" alt="">
+                    <figcaption class="figcaption">"This time, let go your conscious self and act on instinct."</figcaption>
+                </figure>
+                <p>To be added.</p></div>
+                <div class="collumns">
+                    <div class="collumn">
+                        <div class="head"><span class="headline hl1">General Assumptions</span><p><span class="headline hl4">Basic things everyone of us need to be familiar with.</span></p></div>
+                        <p>
+                            Greet your fellow workers with a smile.
+                        </p>
+                        <p>
+                            Respect your organization to expect the same in return. Don't treat your organization as a mere source of earning money. Remember your organization is paying you for your hard work and not for gossiping and loitering around.
+                        </p>
+                        <p>
+                            Reach office on time. If your office timing is 9 AM, make sure you are there at 8.50 AM. It is essential to be disciplined at the workplace.
+                        </p>
+                        <p>
+                            Leave all your personal problems out the moment you step in the office. It is unprofessional to mix personal and professional life. Keep them separate.
+                        </p>
+                    </div>
+
+                    <div class="collumn">
+                        <div class="head"><span class="headline hl5">Workstation Basic Rules</span><p><span class="headline hl4">Show good manners and professionalism</span></p></div>
+                        <p>
+                            Keep your workstation clean and organized.
+                        </p>
+                        <p>
+                            Throw all unwanted pens, pencils, highlighters, erasers, markers and so on. Keep all your stationery items at their proper places. Throw away what all you don’t need.
+                        </p>
+                        <p>
+                            Avoid keeping stacks of files at your desk. It gives a cluttered look to your workstation. Keep them at their respective drawers with a label on top of each file to avoid unnecessary searching.
+                        </p>
+                        <p>
+                            Avoid bringing soft toys, photoframes, candle stands to work.
+                        </p>
+                        <p>
+                            Don’t put posters of your favourite celebrities on the walls at the workplace. It is completely unprofessional and childish.
+                        </p>
+                        <p>
+                            Keep a notepad and pen handy to jot down important contact numbers. Avoid writing on walls or loose paper.
+                        </p>
+                        <p>
+                            Keep your car keys, Bluetooth, earphones and other personal belongings at one place. Female employees should not keep their bags on the desk. Male employees can also keep their wallets in their desk drawer but do remember to take it back home.
+                        </p>
+                        <p>
+                            Do not bring newspaper from home and pile on your desk.
+                        </p>
+                        <p>
+                            Smoking at the workstation is an offence.
+                        </p>
+
+                    </div>
+                    <div class="collumn">
+                        <div class="head"><span class="headline hl5">Workplace Ethics</span><p><span class="headline hl4">Show good manners and professionalism</span></p></div>
+                        <p>
+                            Make sure you don’t throw paper and wrappings here and there. Throw them in dustbin.
+                        </p>
+                        <p>
+                            Do not play video games while being at the office. This is an offence to all the other hard working colleagues.
+                        </p>
+                        <figure class="figure">
+                            <img class="media" src="https://www.chooseust.org/documents/2419340/2419989/The-ABCs-of-Ethics.jpg/ba3e4e8d-d205-4d82-a2d4-c8c0d8c2b27b?t=1491928051896" alt="">
+                            <figcaption class="figcaption">"This time, let go your conscious self and act on instinct."</figcaption>
+                        </figure>
+                        <p>
+                            Throw all unwanted pens, pencils, highlighters, erasers, markers and so on. Keep all your stationery items at their proper places. Throw away what all you don’t need.
+                        </p>
+                        <p>
+                            Keep a notepad and pen handy to jot down important contact numbers. Avoid writing on walls or loose paper.
+                        </p>
+                        <p>
+                            Eating at the workstation attracts cockroaches and insects. Go to the cafeteria for lunch. Not only it will keep your desk clean but also allow you to relax and spend quality time with your colleagues. If you have the habit of eating chocolates or wafers, make sure you throw the wrappers in dustbin. Ask the housekeeping staff to clean up the leftovers.
+                        </p>
+                        <p>
+                            Never peep into other’s workstation. Knock before entering into boss’s cabin.
+                        </p>
+                        <p>
+                            Take care of your tone and pitch while speaking. Remember there are other employees sitting around you as well.
+                        </p>
+                        <p>
+                            If you need to talk to any of your colleagues, use the extension phone. Never shout from your desk. It is bad manners and disturbs others. If you do not have access to the extension phone, get up and walk to the other person’s desk.
+                        </p>
+                        <p>
+                            Smoking at the workstation is an offence.
+                        </p>
+
+                    </div>
+                    <div class="collumn">
+                        <div class="head"><span class="headline hl3">Phone Usage Ethiquette</span><p><span class="headline hl4">Respect others by respecting yourself</span></p></div>
+                        <p>
+                            Always keep your cell phone in the silent or vibration mode at the work place. Loud ring tone disturbs employees who are around.
+                        </p>
+                        <p>
+                            Remember office phone is only for official purposes. Don’t circulate your official number amongst all your friends and relatives. Keep a separate phone for personal use. Making personal calls from official phone is simply not expected out of a sensible professional.
+                        </p>
+                        <p>
+                            Don’t activate film songs or jokes as caller tunes for mobiles meant for official use. It leaves a bad impression on clients or external parties who might call you.
+                        </p>
+                        <p>
+                            Never shout on the phone. Always be soft and polite. Avoid using abusive or foul language.
+                        </p>
+                        <figure class="figure">
+                            <img class="media" src="data:image/jpeg;base64,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" alt="">
+                            <figcaption class="figcaption">"This time, let go your conscious self and act on instinct."</figcaption>
+                        </figure>
+
+                        <p>
+                            Be careful with your phone. Never leave it at other’s workstations. It would waste yours as well as your colleague’s time. Try not to carry cell phone to restrooms.
+                        </p>
+                        <p>
+                            Speak clearly. Never chew anything while speaking over the phone. It is important to concentrate while attending an important official call.
+                        </p>
+                        <p>
+                            Be clear about what you intend to communicate. It is advisable to keep related documents handy. Don’t make the other person wait. Always keep a notepad and pen with you to jot down important points.
+                        </p>
+                        <p>
+                            Make sure your mobile calls do not hamper your productivity. Don’t go for long personal calls at workplace. Be crisp and precise.
+                        </p>
+                        <p>
+                            It is bad manners to pick calls when someone is sitting with you unless and until it is an emergency.
+                        </p>
+                        <p>
+                            Switch off your mobiles while attending important meetings, presentations or seminars. In case of an emergency, move out of the place to attend the call.
+                        </p>
+                    </div>
+                    <div class="collumn">
+                        <div class="head"><span class="headline hl1">Revision History</span><p><span class="headline hl6">Who has banged their heads together to create this?</span></p></div>
+                        <p>04th of March 2019 - Issued for approval</p>
+                        <p>waiting to be approved - still under creation</p>
+                    </div>
+                </div>
+
+</body>
+</html>
+
+    <footer>
+        <p style="margin-left: 40px">By: <a href="mailto:alexandru.bran@nokia.com">Alex@Nokia</a></p>
+
+    </footer>

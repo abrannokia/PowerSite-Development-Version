@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+{% load staticfiles%}
+
+<html>
+<meta charset=“UTF-8“>
+<meta http-equiv=“X-UA =Compatible“ content=“IE =edge, chrome=1“>
+<title>PowerWebSite HOME PAGE</title>
+<link rel="SHORTCUT ICON" href="favicon.jpg" type="image/x-icon" />
+<link rel="ICON" href="favicon.jpg" type="image/ico" />
+<meta name=“description“ content="">
+<meta name=“viewport“ content=“width =device-width“>
+
+<link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.js' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'MyMsgApp/styles.css' %}" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+ {% include 'myMsgApp\navbar.html' %}
+
+<body>
+    <div id="errors" style="
+  background: #c00;
+  color: #fff;
+  display: none;
+  margin: -20px -20px 20px;
+  padding: 20px;
+  white-space: pre-wrap;
+"></div>
+<div id="root"></div>
+<script>
+window.addEventListener('mousedown', function(e) {
+  document.body.classList.add('mouse-navigation');
+  document.body.classList.remove('kbd-navigation');
+});
+window.addEventListener('keydown', function(e) {
+  if (e.keyCode === 9) {
+    document.body.classList.add('kbd-navigation');
+    document.body.classList.remove('mouse-navigation');
+  }
+});
+window.addEventListener('click', function(e) {
+  if (e.target.tagName === 'A' && e.target.getAttribute('href') === '#') {
+    e.preventDefault();
+  }
+});
+window.onerror = function(message, source, line, col, error) {
+  var text = error ? error.stack || error : message + ' (at ' + source + ':' + line + ':' + col + ')';
+  errors.textContent += text + '\n';
+  errors.style.display = '';
+};
+console.error = (function(old) {
+  return function error() {
+    errors.textContent += Array.prototype.slice.call(arguments).join(' ') + '\n';
+    errors.style.display = '';
+    old.apply(this, arguments);
+  }
+})(console.error);
+</script>
+
+
+
+    <div>
+        {% if messages %}
+        <ul class="messages" style="margin-top:50px">
+            {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>
+                {{ message }}</li>
+                {% endfor %}
+        </ul>
+        {% endif %}
+    </div>
+
+    <div>
+        <form action='{% url "my_view_name" %}' method="GET">
+            <input type="submit" value="Click me to update SQL from SQL" id="toggle1" />
+        </form>
+    </div>
+    <p></p>
+    <div>
+        <button onClick="javascript:goPython();">
+            Click Me - I run Javascript
+        </button>
+    </div>
+
+    <script>
+        function goPython() {
+            alert('{{ '"Please do acces any other page on this website by right click and open in new tab method - JAVASCRIPT issue to be fixed :|"' }}');
+            $ajax({
+                type: "POST",
+                url: "C:\Users\abran\OneDrive - Nokia\NOKIA SHARED FOLDER AB\Projects\2019\Django WebSite\developer version\mysite\SQLtoCSV.py",   /* Call python function in this script */
+                data: { param: text },   /* Passing the text data */
+                success: callback
+            });
+        }
+    </script>
+</body>
+
+
+
+Before The execution of following code, I assume you have created a database and a table (with columns Name (varchar), Age(INT) and Address(varchar)) inside that database. Also please update your SQL Server name , UserID, password, DBname and table name in the code below.
+
+In the code. I have used VBScript and embedded it in HTML. Try it out!
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/vbscript">
+        <!--
+
+        Sub Submit_onclick()
+        Dim Connection
+        Dim ConnString
+        Dim Recordset
+
+        Set connection=CreateObject("ADODB.Connection")
+        Set Recordset=CreateObject("ADODB.Recordset")
+        ConnString="DRIVER={SQL Server};SERVER=*YourSQLserverNameHere*;UID=*YourUserIdHere*;PWD=*YourpasswordHere*;DATABASE=*YourDBNameHere*"
+        Connection.Open ConnString
+
+        dim form1
+        Set form1 = document.Register
+
+        Name1 = form1.Name.value
+        Age1 = form1.Age.Value
+        Add1 = form1.address.value
+
+        connection.execute("INSERT INTO [*YourTableName*] VALUES ('"&Name1 &"'," &Age1 &",'"&Add1 &"')")
+
+        End Sub
+
+        //-->
+    </script>
+</head>
+<body>
+
+    <h2>Please Fill details</h2><br>
+    <p>
+        <form name="Register">
+<pre>
+<font face="Times New Roman" size="3">Please enter the log in credentials:<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Name:   <input type="text" name="Name">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Age:        <input type="text" name="Age">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Address:        <input type="text" name="address">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<input type="button" id="Submit" value="submit" /><font>
+        </form>
+    </p>
+    </pre>
+</body>
+</html>
+
+
+
+Before The execution of following code, I assume you have created a database and a table (with columns Name (varchar), Age(INT) and Address(varchar)) inside that database. Also please update your SQL Server name , UserID, password, DBname and table name in the code below.
+
+In the code. I have used VBScript and embedded it in HTML. Try it out!
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/vbscript">
+        <!--
+
+        Sub Submit_onclick()
+        Dim Connection
+        Dim ConnString
+        Dim Recordset
+
+        Set connection=CreateObject("ADODB.Connection")
+        Set Recordset=CreateObject("ADODB.Recordset")
+        ConnString="DRIVER={SQL Server};SERVER=*YourSQLserverNameHere*;UID=*YourUserIdHere*;PWD=*YourpasswordHere*;DATABASE=*YourDBNameHere*"
+        Connection.Open ConnString
+
+        dim form1
+        Set form1 = document.Register
+
+        Name1 = form1.Name.value
+        Age1 = form1.Age.Value
+        Add1 = form1.address.value
+
+        connection.execute("INSERT INTO [*YourTableName*] VALUES ('"&Name1 &"'," &Age1 &",'"&Add1 &"')")
+
+        End Sub
+
+        //-->
+    </script>
+</head>
+<body>
+
+    <h2>Please Fill details</h2><br>
+    <p>
+        <form name="Register">
+<pre>
+<font face="Times New Roman" size="3">Please enter the log in credentials:<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Name:   <input type="text" name="Name">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Age:        <input type="text" name="Age">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Address:        <input type="text" name="address">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<input type="button" id="Submit" value="submit" /><font>
+        </form>
+    </p>
+    </pre>
+</body>
+</html>
+<div id="example-table"></div>
+<div id="tablePrint"> </div>
+<script language="javascript" type="text/javascript">
+<!--
+
+    var myArray = new Array();
+    myArray[0] = 1;
+    myArray[1] = 2.218;
+    myArray[2] = 33;
+    myArray[3] = 114.94;
+    myArray[4] = 5;
+    myArray[5] = 33;
+    myArray[6] = 114.980;
+    myArray[7] = 5;
+
+    var myTable = "<table><tr><td style='width: 100px; color: red;'>Col Head 1</td>";
+    myTable += "<td style='width: 100px; color: red; text-align: right;'>Col Head 2</td>";
+    myTable += "<td style='width: 100px; color: red; text-align: right;'>Col Head 3</td></tr>";
+
+    myTable += "<tr><td style='width: 100px;                   '>---------------</td>";
+    myTable += "<td     style='width: 100px; text-align: right;'>---------------</td>";
+    myTable += "<td     style='width: 100px; text-align: right;'>---------------</td></tr>";
+
+    for (var i = 0; i < 8; i++) {
+        myTable += "<tr><td style='width: 100px;'>Number " + i + " is:</td>";
+        myArray[i] = myArray[i].toFixed(3);
+        myTable += "<td style='width: 100px; text-align: right;'>" + myArray[i] + "</td>";
+        myTable += "<td style='width: 100px; text-align: right;'>" + myArray[i] + "</td></tr>";
+    }
+    myTable += "</table>";
+
+    document.write(myTable);
+
+    //-->
+</script>
+<script language="javascript" type="text/javascript">
+    var objConnection = new ActiveXObject("adodb.connection");
+    var strConn = "driver={sql server};server=TCP:N-5CG63020XL\SQLEXPRESS,49172;database=projects;uid=superuser;password=nokia2018";
+    objConnection.Open(strConn);
+    var rs = new ActiveXObject("ADODB.Recordset");
+    var strQuery = "SELECT * FROM  Norms_Capacity";
+    rs.Open(strQuery, objConnection);
+    rs.MoveFirst();
+    while (!rs.EOF) {
+        document.write(rs.fields(0) + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
+        document.write(rs.fields(1) + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
+        document.write(rs.fields(2) + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    ");
+        document.write(rs.fields(3) + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    ");
+        document.write(rs.fields(4) + "<br/>");
+        rs.movenext();
+    }
+</script>
+<script>
+    $(document).ready(function ($) {
+        var db = window.openDatabase("appDb", "1.0", "appDb", 200000);
+        selectrow();
+    });
+
+    function selectrow() {
+        db.transaction(function (tx) {
+            tx.executeSql("SELECT * FROM contact", [], function (tx, rs) {
+                var output = '';
+                for (var i = 0; i < rs.rows.length; i++) {
+                    var row = rs.rows.item(i)
+                    output += '<tr><td>' + row['id'] + '</td><td>' + row['name'] + '</td><td>' + row['number'] + '</td></tr>';
+                }
+                $('#contactlist').html(output);
+
+            }, errorHandler);
+        });
+    }
+</script>
+</html>
+
+    <footer>
+        <p style="margin-left: 40px">By: <a href="mailto:alexandru.bran@nokia.com">Alex@Nokia</a></p>
+
+    </footer>
